@@ -23,7 +23,7 @@ services:
 
     php-fpm:
         build:
-            dockerfile: ./docker/images/php-fpm/Dockerfile.FPM
+            dockerfile: ../images/php-fpm/Dockerfile
             context: ../../
         container_name: php-fpm
         volumes:
