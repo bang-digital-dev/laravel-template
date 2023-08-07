@@ -26,8 +26,9 @@ services:
             dockerfile: ../images/php-fpm/Dockerfile
             context: ../../
         container_name: php-fpm
+        working_dir: /var/www/html
         volumes:
-            - ../../:/app
+            - ../../:/var/www/html
             - ./configs/php-fpm/php.ini:/usr/local/etc/php/conf.d/php-dev.ini
         environment:
             # app
